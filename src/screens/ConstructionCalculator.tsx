@@ -140,6 +140,13 @@ export const ConstructionCalculator = () => {
 				</Picker>
 			</View>
 
+			{cost !== null && (
+				<Text style={styles.result}>
+					Budowa Twojego domu wyniesie: {cost.toLocaleString("pl-PL")}{" "}
+					zł
+				</Text>
+			)}
+
 			{/* Przycisk Oblicz */}
 			<TouchableOpacity
 				style={[styles.button, !isFormValid && styles.buttonDisabled]}
@@ -149,12 +156,7 @@ export const ConstructionCalculator = () => {
 			</TouchableOpacity>
 
 			{/* Wynik */}
-			{cost !== null && (
-				<Text style={styles.result}>
-					Budowa Twojego domu wyniesie: {cost.toLocaleString("pl-PL")}{" "}
-					zł
-				</Text>
-			)}
+			
 		</ScrollView>
 	);
 };
@@ -213,6 +215,5 @@ const styles = StyleSheet.create({
 		fontSize: 18,
 		fontWeight: "bold",
 		textAlign: "center",
-		marginBottom: 40,
 	},
 });

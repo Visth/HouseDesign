@@ -166,9 +166,9 @@ export const Home = () => {
 						Quisque volutpat, tortor non volutpat ultricies, nulla
 						quam facilisis nunc, non elementum nisi ex in sapien.
 					</Text>
-					<TouchableOpacity style={styles.button}>
+					<TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Plot")}>
 						<Text style={styles.buttonText}>
-							Więcej o naszym doświadczeniu
+							Zobacz, jak przebiega budowa
 						</Text>
 					</TouchableOpacity>
 				</View>
