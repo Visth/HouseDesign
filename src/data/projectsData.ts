@@ -1,5 +1,3 @@
-// import willa_parkowa_6_main from "../assets/img/willa-parkowa-6/willa-parkowa-6_main.jpg";
-
 export interface Project {
   mainImage: any;
   planImage: any;
@@ -12,8 +10,6 @@ export interface Project {
   generalDescription: string;
   interiorDescription: string;
 }
-
-// src/data/projectsData.ts
 
 const projectsData = [
   {
@@ -60,9 +56,9 @@ const projectsData = [
     rawStatePrice: 750000,
     turnKeyPrice: 1600000,
     gardenTurnKeyPrice: 1850000,
-    generalDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    generalDescription: "Projekt domu Anatol to elegancki i funkcjonalny dom jednorodzinny o klasycznym wyglądzie i nowoczesnym układzie pomieszczeń. Powierzchnia użytkowa wynosi 145 m², co czyni go idealnym wyborem dla 4-5 osobowej rodziny. Budynek jest parterowy, z możliwością adaptacji poddasza użytkowego, co daje dodatkową przestrzeń do zagospodarowania. Prosta bryła, dwuspadowy dach oraz duże przeszklenia sprawiają, że dom jest energooszczędny i dobrze doświetlony. Taras od strony ogrodu pozwala cieszyć się otwartą przestrzenią w komfortowych warunkach.",
     interiorDescription:
-      "Praesent tincidunt libero et magna egestas, sit amet cursus lorem luctus.",
+      "Do wnętrza prowadzi zadaszone wejście, które otwiera się na przestronny hol z bezpośrednim dostępem do strefy dziennej. Salon z kominkiem połączony z jadalnią i otwartą kuchnią tworzy serce domu, w którym domownicy mogą spędzać wspólnie czas. W lewej części budynku znajdują się trzy wygodne sypialnie, łazienka oraz dodatkowe WC. Główna sypialnia ma wydzieloną garderobę, zapewniającą dodatkowy komfort. W części gospodarczej przewidziano kotłownię i pralnię z wyjściem na zewnątrz. Możliwość zaadaptowania poddasza pozwala na stworzenie dodatkowych pokoi lub przestrzeni rekreacyjnej.",
   },
   {
     mainImage: require("../assets/img/anatol-2/anatol-2-main.jpg"),
@@ -82,9 +78,9 @@ const projectsData = [
     rawStatePrice: 1200000,
     turnKeyPrice: 2500000,
     gardenTurnKeyPrice: 2800000,
-    generalDescription: "Spokój i piękne widoki nad jeziorem.",
+    generalDescription: "Anatol 2 to rozbudowana wersja swojego poprzednika, oferująca jeszcze większą funkcjonalność i przestrzeń. Powierzchnia użytkowa wynosi 165 m², a rozkład pomieszczeń został zoptymalizowany pod kątem wygody mieszkańców. Dom wyróżnia się klasyczną bryłą z nowoczesnymi elementami architektonicznymi, takimi jak panoramiczne przeszklenia oraz przestronny taras. Dwuspadowy dach oraz proste rozwiązania konstrukcyjne sprawiają, że jest to budynek energooszczędny i łatwy w budowie.",
     interiorDescription:
-      "Luksusowe wykończenia i przemyślany układ wnętrza.",
+      "Wchodząc do domu, znajdujemy się w przestronnym holu prowadzącym do części dziennej, na którą składa się salon z dużymi oknami wychodzącymi na taras, jadalnia oraz kuchnia z wyspą. Główna sypialnia została powiększona i wyposażona w prywatną łazienkę oraz garderobę. Dodatkowe dwie sypialnie dzielą wspólną łazienkę. W nowej wersji projektu przewidziano również osobne pomieszczenie biurowe, idealne do pracy zdalnej. Część gospodarcza obejmuje kotłownię, pralnię oraz garaż dwustanowiskowy z bezpośrednim przejściem do domu.",
   },
   {
     mainImage: require("../assets/img/dom-na-poludniowej/dom-na-poludniowej-main.jpg"),
@@ -105,8 +101,8 @@ const projectsData = [
     rawStatePrice: 890000,
     turnKeyPrice: 1800000,
     gardenTurnKeyPrice: 2000000,
-    generalDescription: "Dom z nowoczesną bryłą i technologią.",
-    interiorDescription: "Otwarta przestrzeń i minimalistyczny design.",
+    generalDescription: "Dom na Południowej to projekt skierowany do rodzin ceniących wygodę, funkcjonalność i otwartą przestrzeń. Powierzchnia użytkowa wynosi 180 m², a układ pomieszczeń został zaprojektowany tak, aby maksymalnie wykorzystać światło dzienne i otoczenie działki. Dzięki dużym przeszkleniom oraz przestronnemu tarasowi dom idealnie komponuje się z krajobrazem. Budynek posiada klasyczną, ale nowoczesną formę, z elegancką elewacją i dachówką w ciemnym kolorze, nadającą mu charakteru.",
+    interiorDescription: "Wnętrze domu to harmonijne połączenie funkcjonalności i stylu. Otwarta strefa dzienna obejmuje duży salon, kuchnię z jadalnią oraz wyjście na taras. W części prywatnej zaprojektowano trzy sypialnie, z czego jedna – główna – posiada własną garderobę i łazienkę. Dodatkowy pokój może pełnić funkcję gabinetu lub pokoju gościnnego. Komfortowe wnętrze uzupełnia osobna pralnia, spiżarnia oraz garaż dwustanowiskowy.",
   },
   {
     mainImage: require("../assets/img/ekonomiczny/ekonomiczny-main.jpg"),
@@ -124,8 +120,8 @@ const projectsData = [
     rawStatePrice: 950000,
     turnKeyPrice: 2000000,
     gardenTurnKeyPrice: 2300000,
-    generalDescription: "Idealny dom dla miłośników górskich krajobrazów.",
-    interiorDescription: "Ciepłe wnętrza i duże przeszklenia.",
+    generalDescription: "Projekt Ekonomiczny to propozycja dla osób szukających nowoczesnego, energooszczędnego i niedrogiego w budowie domu. Dzięki przemyślanej konstrukcji i zwartej bryle o powierzchni 120 m², budynek zapewnia wygodę użytkowania przy minimalnych kosztach eksploatacji. Dom został zaprojektowany z myślą o 3-4 osobowej rodzinie, a jego kompaktowa forma sprawia, że doskonale sprawdzi się na niewielkich działkach.",
+    interiorDescription: "Wnętrze podzielono na strefę dzienną i prywatną. Przestronny salon z aneksem kuchennym tworzy otwartą przestrzeń sprzyjającą codziennemu życiu domowników. Trzy wygodne sypialnie oraz łazienka zapewniają komfortowy wypoczynek. W części gospodarczej znajduje się kotłownia oraz dodatkowe pomieszczenie techniczne. Prosta konstrukcja pozwala na łatwą adaptację wnętrza do indywidualnych potrzeb mieszkańców.",
   },
   {
     mainImage: require("../assets/img/helios/helios-main.jpg"),
@@ -143,8 +139,8 @@ const projectsData = [
     rawStatePrice: 1800000,
     turnKeyPrice: 3500000,
     gardenTurnKeyPrice: 3800000,
-    generalDescription: "Luksus w sercu miasta.",
-    interiorDescription: "Ekskluzywne wnętrza z najwyższej jakości materiałów.",
+    generalDescription: "Projekt Helios to nowoczesna willa o powierzchni 230 m², charakteryzująca się przestronnymi wnętrzami i dużymi przeszkleniami. Dom wyróżnia się minimalistycznym designem i elegancką formą, łącząc funkcjonalność z luksusem. Budynek został zaprojektowany z myślą o osobach ceniących przestrzeń, komfort i otwartość na otoczenie. Tarasy oraz przesuwne okna sprawiają, że granice między wnętrzem a ogrodem są niemal niezauważalne.",
+    interiorDescription: "Centralnym punktem domu jest imponujący salon z panoramicznymi oknami, otwierający się na ogród. W strefie dziennej znajduje się również elegancka kuchnia z wyspą oraz jadalnia. Strefa prywatna obejmuje apartament główny z garderobą i łazienką, dwie dodatkowe sypialnie oraz osobną łazienkę. Dom posiada także prywatną siłownię, gabinet oraz garaż na dwa samochody. Wysokie sufity i otwarte przestrzenie sprawiają, że wnętrze jest pełne światła i przestronności.",
   },
   {
     mainImage: require("../assets/img/oceanic/oceanic-main.jpg"),
@@ -164,8 +160,8 @@ const projectsData = [
     rawStatePrice: 650000,
     turnKeyPrice: 1200000,
     gardenTurnKeyPrice: 1400000,
-    generalDescription: "Spokój na przedmieściach.",
-    interiorDescription: "Funkcjonalne wnętrza dla rodziny.",
+    generalDescription: "Projekt Oceanic to nowoczesny dom o lekkiej, eleganckiej bryle, zaprojektowany z myślą o osobach ceniących przestrzeń i światło. Powierzchnia użytkowa wynosi 195 m², co czyni go idealnym wyborem dla 4-5 osobowej rodziny. Charakterystycznym elementem projektu są duże przeszklenia oraz harmonijne połączenie wnętrza z otoczeniem, co sprawia, że dom nabiera wyjątkowego, otwartego charakteru. Taras oraz przemyślane rozmieszczenie pomieszczeń pozwalają na pełne wykorzystanie naturalnego światła i widoków.",
+    interiorDescription: "Wchodząc do Oceanic, od razu trafiamy do przestronnej strefy dziennej, obejmującej salon, jadalnię oraz otwartą kuchnię z centralnie umiejscowioną wyspą. Panoramiczne okna wychodzą na taras i ogród, zapewniając niepowtarzalny klimat. Strefa prywatna mieści trzy przestronne sypialnie, z czego główna posiada własną łazienkę i garderobę. Dodatkowe pomieszczenie można przeznaczyć na gabinet lub pokój gościnny. W bryle budynku przewidziano także pomieszczenia gospodarcze oraz garaż dwustanowiskowy.",
   },
   {
     mainImage: require("../assets/img/qubik/qubik-main.jpg"),
@@ -191,8 +187,8 @@ const projectsData = [
     rawStatePrice: 1300000,
     turnKeyPrice: 2700000,
     gardenTurnKeyPrice: 3000000,
-    generalDescription: "Widok na morze w każdej chwili.",
-    interiorDescription: "Przestronne wnętrza i duże tarasy.",
+    generalDescription: "Qubik to dom dla miłośników nowoczesnej architektury, charakteryzujący się minimalistycznym designem i geometryczną bryłą. Powierzchnia użytkowa wynosi 160 m², co pozwala na wygodne zagospodarowanie przestrzeni dla 4-osobowej rodziny. Elewacja w stylu industrialnym, duże przeszklenia oraz płaski dach nadają budynkowi eleganckiego, nowoczesnego charakteru. Dzięki prostocie formy i przemyślanemu układowi pomieszczeń dom jest również energooszczędny i funkcjonalny.",
+    interiorDescription: "Wnętrze Qubik zostało zaprojektowane w duchu minimalizmu i otwartości. Strefa dzienna to przestronny salon z jadalnią oraz kuchnią, które płynnie się ze sobą łączą. Dzięki przesuwnym drzwiom tarasowym wnętrze może się otworzyć na ogród, tworząc jednolitą przestrzeń. Strefa nocna obejmuje trzy sypialnie, z czego główna posiada prywatną łazienkę. Dodatkowy pokój może pełnić funkcję biura lub siłowni. Dom wyposażono w pomieszczenie techniczne, pralnię oraz garaż z bezpośrednim wejściem do budynku.",
   },
   {
     mainImage: require("../assets/img/rezydencja-lesna/rezydencja-lesna-main.jpg"),
@@ -211,8 +207,8 @@ const projectsData = [
     rawStatePrice: 800000,
     turnKeyPrice: 1500000,
     gardenTurnKeyPrice: 1700000,
-    generalDescription: "Ekologia i oszczędność w jednym.",
-    interiorDescription: "Nowoczesne rozwiązania energetyczne.",
+    generalDescription: "Projekt Rezydencja Leśna to ekskluzywny dom jednorodzinny, stworzony z myślą o osobach szukających komfortu i przestrzeni. Powierzchnia użytkowa wynosi 280 m², a elegancka bryła doskonale komponuje się z naturalnym otoczeniem. Dzięki dużym przeszkleniom i starannie zaplanowanym tarasom mieszkańcy mogą cieszyć się bliskością natury. Układ pomieszczeń zapewnia prywatność oraz funkcjonalność, a wysokiej jakości materiały podkreślają prestiżowy charakter budynku.",
+    interiorDescription: "Rezydencja zachwyca od pierwszego kroku – reprezentacyjny hol prowadzi do przestronnego salonu z wysokimi sufitami, połączonego z jadalnią i nowoczesną kuchnią. W strefie prywatnej znajduje się główna sypialnia z własną garderobą i łazienką, a także dwie dodatkowe sypialnie, każda z własnym wyjściem na taras. Dom został wzbogacony o prywatne biuro, siłownię oraz pomieszczenie rekreacyjne, które można dostosować do indywidualnych potrzeb. W bryle budynku znajduje się również przestronny garaż na dwa auta oraz osobne pomieszczenie gospodarcze.",
   },
   {
     mainImage: require("../assets/img/willa-atrium/willa-atrium-main.jpg"),
@@ -232,8 +228,8 @@ const projectsData = [
     rawStatePrice: 1400000,
     turnKeyPrice: 2900000,
     gardenTurnKeyPrice: 3200000,
-    generalDescription: "Piękny widok na okolicę.",
-    interiorDescription: "Przestronne wnętrza i luksusowe wykończenie.",
+    generalDescription: "Willa Atrium to luksusowy dom parterowy, inspirowany klasycznymi rezydencjami z nowoczesnym akcentem. Budynek o powierzchni 210 m² cechuje się przestronną bryłą, dużymi przeszkleniami oraz eleganckim dziedzińcem wewnętrznym, który stanowi centralny punkt projektu. Układ pomieszczeń zapewnia mieszkańcom wygodę i prywatność, a zastosowanie nowoczesnych technologii sprawia, że dom jest energooszczędny i komfortowy przez cały rok.",
+    interiorDescription: "Układ wnętrza Willi Atrium sprzyja wygodzie i funkcjonalności. Przestronny salon z wysokimi sufitami oraz kominkiem łączy się z jadalnią i otwartą kuchnią, skąd można wyjść na taras i do ogrodu. W części prywatnej znajdują się trzy sypialnie, z których główna wyposażona jest w prywatną łazienkę oraz garderobę. W willi przewidziano także gabinet, pralnię oraz przestrzeń fitness. Wewnętrzny dziedziniec nadaje domowi niepowtarzalny klimat i stanowi doskonałe miejsce do wypoczynku.",
   },
   {
     mainImage: require("../assets/img/willa-eska/willa-eska-main.jpg"),
@@ -258,8 +254,8 @@ const projectsData = [
     rawStatePrice: 850000,
     turnKeyPrice: 1800000,
     gardenTurnKeyPrice: 2050000,
-    generalDescription: "Stylowy dom z elementami rustykalnymi.",
-    interiorDescription: "Drewniane detale i ciepła atmosfera.",
+    generalDescription: "Projekt Willa Eska to elegancka i nowoczesna rezydencja o powierzchni 250 m², idealna dla osób poszukujących przestrzeni, komfortu i nowoczesnego designu. Budynek wyróżnia się nowoczesną bryłą z dużymi przeszkleniami, które zapewniają doskonałe doświetlenie wnętrz oraz naturalne połączenie domu z otoczeniem. Starannie zaprojektowane detale i wysokiej jakości materiały podkreślają luksusowy charakter inwestycji.",
+    interiorDescription: "Willa składa się z dwóch poziomów. Na parterze znajduje się przestronny salon z panoramicznymi oknami, jadalnia oraz otwarta kuchnia z wyspą. Strefa prywatna obejmuje apartament główny z garderobą i łazienką, a także dwa dodatkowe pokoje z dostępem do wspólnej łazienki. Na piętrze zaplanowano dodatkową przestrzeń rekreacyjną oraz pokój gościnny. Garaż na dwa samochody oraz pomieszczenie techniczne uzupełniają funkcjonalność budynku. Dzięki przemyślanemu układowi wnętrz dom zapewnia maksymalny komfort mieszkańcom i gościom.",
   },
   {
     mainImage: require("../assets/img/willa-parkowa-2/willa-parkowa-2-main.jpg"),
@@ -277,8 +273,8 @@ const projectsData = [
     rawStatePrice: 700000,
     turnKeyPrice: 1400000,
     gardenTurnKeyPrice: 1600000,
-    generalDescription: "Przestrzeń w nowoczesnym wydaniu.",
-    interiorDescription: "Industrialne wykończenie i otwarta przestrzeń.",
+    generalDescription: "Willa Parkowa 2 to elegancki dom jednorodzinny o klasycznej bryle i nowoczesnym wykończeniu. Jest to parterowa rezydencja o powierzchni użytkowej 190 m², zaprojektowana z myślą o 4-5 osobowej rodzinie. Dom łączy funkcjonalność z estetyką, a jego układ pozwala na maksymalne wykorzystanie przestrzeni. Charakterystycznym elementem jest duży, zadaszony taras, który tworzy harmonijne przejście między wnętrzem a ogrodem.",
+    interiorDescription: "Wnętrze domu podzielone jest na dwie strefy – dzienną i prywatną. Przestronny salon z wysokimi oknami łączy się z jadalnią oraz otwartą kuchnią, w której znajduje się duża wyspa kuchenna. Strefa nocna obejmuje trzy komfortowe sypialnie, w tym główną z prywatną łazienką i garderobą. Dodatkowe pomieszczenia, takie jak pralnia, spiżarnia oraz dwustanowiskowy garaż, zapewniają wygodę użytkowania.",
   },
   {
     mainImage: require("../assets/img/willa-parkowa-4/willa-parkowa-4-main.jpg"),
@@ -300,8 +296,8 @@ const projectsData = [
     rawStatePrice: 750000,
     turnKeyPrice: 1550000,
     gardenTurnKeyPrice: 1750000,
-    generalDescription: "Cisza i spokój w otoczeniu lasu.",
-    interiorDescription: "Przytulne wnętrza i nowoczesny układ.",
+    generalDescription: "Willa Parkowa 4 to wyjątkowy projekt dla osób ceniących przestrzeń i elegancję. Dom o powierzchni 220 m² łączy klasyczny styl rezydencji z nowoczesnymi rozwiązaniami technologicznymi. Budynek zaprojektowano na planie litery „L”, co tworzy wygodny i funkcjonalny układ wnętrza. Duże przeszklenia i szerokie tarasy zapewniają doskonałe połączenie z otoczeniem.",
+    interiorDescription: "W strefie dziennej znajduje się imponujący salon z kominkiem, jadalnia oraz przestronna kuchnia z centralną wyspą. Dzięki wysokim sufitom i dużym oknom wnętrze jest pełne naturalnego światła. Willa posiada cztery sypialnie, w tym główną z własną łazienką i garderobą. Dodatkowym atutem jest gabinet, który może pełnić funkcję pokoju gościnnego. W budynku znajduje się również garaż na dwa samochody oraz pomieszczenie techniczne.",
   },
   {
     mainImage: require("../assets/img/willa-parterowa/willa-parterowa-main.jpg"),
@@ -322,8 +318,8 @@ const projectsData = [
     rawStatePrice: 1100000,
     turnKeyPrice: 2400000,
     gardenTurnKeyPrice: 2700000,
-    generalDescription: "Elegancja w stylu Art Deco.",
-    interiorDescription: "Wyjątkowe detale i przestronne pomieszczenia.",
+    generalDescription: "Willa Parterowa to komfortowy dom o powierzchni 180 m², zaprojektowany z myślą o wygodzie mieszkańców. Charakteryzuje się klasyczną, harmonijną bryłą i funkcjonalnym układem pomieszczeń. Parterowa konstrukcja eliminuje konieczność korzystania ze schodów, co sprawia, że dom jest idealnym wyborem zarówno dla rodzin z dziećmi, jak i seniorów.",
+    interiorDescription: "Wejście prowadzi do przestronnego salonu z jadalnią i otwartą kuchnią, z której można wyjść na duży, zadaszony taras. Willa posiada trzy sypialnie, w tym główną z prywatną łazienką. Dodatkowy pokój może pełnić funkcję gabinetu lub pokoju gościnnego. W budynku znajduje się również spiżarnia, pralnia oraz garaż na dwa samochody.",
   },
   {
     mainImage: require("../assets/img/willa-parterowa-2/willa-parterowa-2-main.jpg"),
@@ -344,8 +340,8 @@ const projectsData = [
     rawStatePrice: 950000,
     turnKeyPrice: 1950000,
     gardenTurnKeyPrice: 2250000,
-    generalDescription: "Duży dom dla dużej rodziny.",
-    interiorDescription: "Przestronne wnętrza i funkcjonalny układ.",
+    generalDescription: "Willa Parterowa 2 to nowoczesny dom o prostej, ale eleganckiej bryle. Budynek o powierzchni 200 m² zaprojektowano z myślą o komforcie mieszkańców i ich codziennych potrzebach. Willa wyróżnia się dużymi przeszkleniami, otwartą przestrzenią oraz tarasem łączącym wnętrze z ogrodem.",
+    interiorDescription: "Wnętrze podzielono na strefę dzienną i prywatną. Salon, połączony z jadalnią i kuchnią, to serce domu – wysokie okna zapewniają naturalne światło i widok na ogród. W części prywatnej znajdują się trzy sypialnie, każda z dostępem do tarasu, oraz dwie łazienki. Dodatkowe pomieszczenia gospodarcze i garaż uzupełniają funkcjonalność domu.",
   },
   {
     mainImage: require("../assets/img/willa-siedziba/willa-siedziba-main.jpg"),
@@ -374,8 +370,8 @@ const projectsData = [
     rawStatePrice: 950000,
     turnKeyPrice: 1950000,
     gardenTurnKeyPrice: 2250000,
-    generalDescription: "Duży dom dla dużej rodziny.",
-    interiorDescription: "Przestronne wnętrza i funkcjonalny układ.",
+    generalDescription: "Willa Siedziba to luksusowa rezydencja o powierzchni 300 m², przeznaczona dla osób ceniących przestrzeń i prestiż. Klasyczna architektura połączona z nowoczesnymi technologiami sprawia, że dom jest nie tylko piękny, ale i energooszczędny. Elegancka bryła oraz rozległe tarasy podkreślają ekskluzywny charakter budynku.",
+    interiorDescription: "Willa oferuje przestronny salon z kominkiem, jadalnię oraz dużą kuchnię z wyspą. Na parterze znajduje się także gabinet i pokój gościnny. Na piętrze zaplanowano trzy sypialnie – każda z własną garderobą i łazienką. Dodatkowo dom wyposażono w prywatną siłownię, saunę oraz pomieszczenia rekreacyjne. Garaż na trzy samochody i osobne pomieszczenie techniczne uzupełniają funkcjonalność budynku.",
   },
   {
     mainImage: require("../assets/img/willa-sloneczna/willa-sloneczna-main.jpg"),
@@ -393,8 +389,8 @@ const projectsData = [
     rawStatePrice: 950000,
     turnKeyPrice: 1950000,
     gardenTurnKeyPrice: 2250000,
-    generalDescription: "Duży dom dla dużej rodziny.",
-    interiorDescription: "Przestronne wnętrza i funkcjonalny układ.",
+    generalDescription: "Willa Słoneczna to nowoczesny dom parterowy o powierzchni 210 m², idealny dla osób, które cenią przestrzeń i otwartość. Bryła budynku została zaprojektowana w taki sposób, aby maksymalnie wykorzystać naturalne światło – stąd duże przeszklenia i otwarte przestrzenie. Dom doskonale sprawdzi się na działkach z dużym ogrodem.",
+    interiorDescription: "Przestronny salon połączony z jadalnią i kuchnią stanowi serce domu. Panoramiczne okna wychodzą na rozległy taras, co pozwala cieszyć się widokiem na ogród. W części prywatnej znajdują się trzy sypialnie, każda z dostępem do tarasu, oraz dwie łazienki. Dom został również wyposażony w pralnię, spiżarnię i dwustanowiskowy garaż.",
   },
 ];
 

@@ -11,20 +11,18 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import projectsData from "../data/projectsData";
 import themeColors from "../styles/theme";
-import { useNavigation } from "@react-navigation/native"; // Import nawigacji
+import { useNavigation } from "@react-navigation/native";
 
 export const Projects = () => {
-	const [searchQuery, setSearchQuery] = useState(""); // Stan wyszukiwania
-	const navigation: any = useNavigation(); // Hook do obsługi nawigacji
+	const [searchQuery, setSearchQuery] = useState("");
+	const navigation: any = useNavigation();
 
-	// Filtrowanie projektów na podstawie wyszukiwania
 	const filteredProjects = projectsData.filter((project) =>
 		project.name.toLowerCase().includes(searchQuery.toLowerCase())
 	);
 
 	return (
 		<View style={styles.container}>
-			{/* Sticky Options Section */}
 			<View style={styles.stickyOptionsContainer}>
 				<TouchableOpacity
 					style={styles.option}
@@ -45,7 +43,6 @@ export const Projects = () => {
 				</TouchableOpacity>
 			</View>
 
-			{/* Search Input */}
 			<View style={styles.searchContainer}>
 				<Ionicons
 					name='search'
@@ -61,7 +58,6 @@ export const Projects = () => {
 				/>
 			</View>
 
-			{/* Projects List */}
 			<FlatList
 				data={filteredProjects}
 				keyExtractor={(item, index) => index.toString()}

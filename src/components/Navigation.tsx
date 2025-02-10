@@ -6,12 +6,11 @@ import {
 	TouchableOpacity,
 	Animated,
 	TextInput,
-	FlatList,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import themeColors from "../styles/theme";
-import projectsData from "../data/projectsData"; // Import projektów
+import projectsData from "../data/projectsData";
 
 export const Navigation = () => {
 	const [menuVisible, setMenuVisible] = useState(false);
@@ -19,10 +18,10 @@ export const Navigation = () => {
 	const [searchValue, setSearchValue] = useState("");
 	const navigation: any = useNavigation();
 
-	// Filtracja projektów po wpisanej nazwie
+
 	const filteredProjects = projectsData.filter(
 		(project) =>
-			project.name.toLowerCase().startsWith(searchValue.toLowerCase()) // Sprawdza początek nazwy
+			project.name.toLowerCase().startsWith(searchValue.toLowerCase())
 	);
 
 	const calculateMenuHeight = () => {
@@ -33,18 +32,12 @@ export const Navigation = () => {
 	};
 
 	const navigateToProject = (project: any) => {
-		// 1️⃣ Przejście do szczegółów projektu
 		navigation.navigate("ProjectDetails", { project });
-	
-		// 2️⃣ Zamknięcie menu nawigacji
-		setMenuVisible(false);
-		
-		// 3️⃣ Resetowanie pola wyszukiwania
+		setMenuVisible(false);	
 		setSearchValue("");
 	
-		// 4️⃣ Schowanie animowanego menu (jeśli jest)
 		Animated.timing(menuHeight, {
-			toValue: 0, // Zamyka animację menu
+			toValue: 0,
 			duration: 300,
 			useNativeDriver: false,
 		}).start();
@@ -63,7 +56,6 @@ export const Navigation = () => {
 
 	return (
 		<View style={styles.container}>
-			{/* Pasek nawigacji */}
 			<View style={styles.navbar}>
 				<View style={styles.leftSection}>
 					<Ionicons name="home" size={40} color={themeColors.black} style={styles.icon} />
@@ -79,11 +71,9 @@ export const Navigation = () => {
 				</TouchableOpacity>
 			</View>
 	
-			{/* Rozwijane menu */}
 			<Animated.View style={[styles.menu, { height: menuHeight }]}>
 				{menuVisible && (
 					<>
-						{/* Wyszukiwarka */}
 						<View style={styles.searchContainer}>
 							<Ionicons name="search" size={24} color={themeColors.darkGray} style={styles.searchIcon} />
 							<TextInput
@@ -95,7 +85,6 @@ export const Navigation = () => {
 							/>
 						</View>
 	
-						{/* Lista wyników wyszukiwania */}
 						{searchValue.length > 0 && filteredProjects.length > 0 && (
 							<View style={styles.searchResultsContainer}>
 								{filteredProjects.map((project) => (
@@ -106,7 +95,6 @@ export const Navigation = () => {
 							</View>
 						)}
 	
-						{/* Opcje w menu */}
 						<TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate("Home")}>
 							<Text style={styles.menuText}>Strona główna</Text>
 						</TouchableOpacity>
@@ -165,24 +153,24 @@ const styles = StyleSheet.create({
 		paddingVertical: 10,
 		borderBottomWidth: 1,
 		borderBottomColor: themeColors.darkGray,
-		backgroundColor: themeColors.lightGreen, // Tło wyszukiwarki
-		zIndex: 20, // Na wierzchu
+		backgroundColor: themeColors.lightGreen,
+		zIndex: 20,
 	},
 	searchIcon: {
 		marginRight: 10,
 	},
 	searchResultsContainer: {
-		position: "absolute", // Na wierzchu
-		top: 60, // Odsunięcie od wyszukiwarki
+		position: "absolute",
+		top: 60,
 		left: 10,
 		right: 10,
 		backgroundColor: themeColors.white,
 		borderWidth: 1,
 		borderColor: themeColors.darkGray,
 		borderRadius: 8,
-		maxHeight: 200, // Maksymalna wysokość
+		maxHeight: 200,
 		overflow: "scroll",
-		zIndex: 100, // Zapewnia widoczność
+		zIndex: 100,
 	},
 	searchInput: {
 		flex: 1,

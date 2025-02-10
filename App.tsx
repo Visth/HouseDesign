@@ -20,31 +20,31 @@ const App = () => (
 			<Stack.Screen name="LandingScreen" component={LandingScreen} />
 			<Stack.Screen
 				name="Home"
-				component={withNavigation(Home)} // Użycie wrappera dla nawigacji
+				component={withNavigation(Home)}
 			/>
 			<Stack.Screen
 				name="Contact"
-				component={withNavigation(Contact)} // Użycie wrappera dla nawigacji
+				component={withNavigation(Contact)}
 			/>
 			<Stack.Screen
 				name="Projects"
-				component={withNavigation(Projects)} // Użycie wrappera dla nawigacji
+				component={withNavigation(Projects)}
 			/>
 			<Stack.Screen
 				name="ProjectDetails"
-				component={withNavigation(ProjectDetails)} // Użycie wrappera dla nawigacji
+				component={withNavigation(ProjectDetails)}
 			/>
 			<Stack.Screen
 				name="ConstructionCalculator"
-				component={withNavigation(ConstructionCalculator)} // Użycie wrappera dla nawigacji
+				component={withNavigation(ConstructionCalculator)}
 			/>
 			<Stack.Screen
 				name="Plot"
-				component={withNavigation(Plot)} // Użycie wrappera dla nawigacji
+				component={withNavigation(Plot)}
 			/>
 			<Stack.Screen
 				name="IndividualProject"
-				component={withNavigation(IndividualProject)} // Użycie wrappera dla nawigacji
+				component={withNavigation(IndividualProject)}
 			/>
 		</Stack.Navigator>
 	</NavigationContainer>
@@ -52,9 +52,6 @@ const App = () => (
 
 export default App;
 
-/**
- * HOC (Higher Order Component) do owijania ekranów, które mają zawierać nawigację.
- */
 const withNavigation = (Component: React.ComponentType) => {
 	return (props: any) => (
 		<>

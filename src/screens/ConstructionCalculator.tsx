@@ -42,7 +42,7 @@ export const ConstructionCalculator = () => {
 		area && province && buildingType && roofType && ceilingType && garage;
 
 	const calculateCost = () => {
-		let baseCost = parseFloat(area) * 3000; // Podstawowy koszt za m²
+		let baseCost = parseFloat(area) * 3000;
 
 		if (roofType === "Dwuspadowy") baseCost *= 1.05;
 		if (roofType === "Wielospadowy") baseCost *= 1.1;
@@ -57,7 +57,6 @@ export const ConstructionCalculator = () => {
 		<ScrollView style={styles.container}>
 			<Text style={styles.title}>Kalkulator Budowy</Text>
 
-			{/* Powierzchnia użytkowa */}
 			<View style={styles.card}>
 				<Text style={styles.label}>
 					Podaj powierzchnię użytkową domu (m²)
@@ -71,7 +70,6 @@ export const ConstructionCalculator = () => {
 				/>
 			</View>
 
-			{/* Województwo */}
 			<View style={styles.card}>
 				<Text style={styles.label}>Województwo inwestycji</Text>
 				<Picker
@@ -85,7 +83,6 @@ export const ConstructionCalculator = () => {
 				</Picker>
 			</View>
 
-			{/* Rodzaj budynku */}
 			<View style={styles.card}>
 				<Text style={styles.label}>Wybierz rodzaj budynku</Text>
 				<Picker
@@ -99,7 +96,6 @@ export const ConstructionCalculator = () => {
 				</Picker>
 			</View>
 
-			{/* Rodzaj dachu */}
 			<View style={styles.card}>
 				<Text style={styles.label}>Wybierz rodzaj dachu</Text>
 				<Picker
@@ -113,7 +109,6 @@ export const ConstructionCalculator = () => {
 				</Picker>
 			</View>
 
-			{/* Rodzaj stropu */}
 			<View style={styles.card}>
 				<Text style={styles.label}>Wybierz rodzaj stropu</Text>
 				<Picker
@@ -126,7 +121,6 @@ export const ConstructionCalculator = () => {
 				</Picker>
 			</View>
 
-			{/* Garaż */}
 			<View style={styles.card}>
 				<Text style={styles.label}>Wybierz garaż</Text>
 				<Picker
@@ -147,16 +141,12 @@ export const ConstructionCalculator = () => {
 				</Text>
 			)}
 
-			{/* Przycisk Oblicz */}
 			<TouchableOpacity
 				style={[styles.button, !isFormValid && styles.buttonDisabled]}
 				onPress={calculateCost}
 				disabled={!isFormValid}>
 				<Text style={styles.buttonText}>Oblicz</Text>
 			</TouchableOpacity>
-
-			{/* Wynik */}
-			
 		</ScrollView>
 	);
 };

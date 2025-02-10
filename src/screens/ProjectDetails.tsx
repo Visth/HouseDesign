@@ -32,18 +32,15 @@ export const ProjectDetails = () => {
 	}
 	const { width, height } = useWindowDimensions();
 
-	// Stan modalu oraz wybranego zdjęcia
 	const [modalVisible, setModalVisible] = useState(false);
 	const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 	const [planModalVisible, setPlanModalVisible] = useState(false);
 
-	// Funkcja otwierająca modal z wybranym zdjęciem
 	const openModal = (index: number) => {
 		setSelectedImageIndex(index);
 		setModalVisible(true);
 	};
 
-	// Funkcja zamykająca modal
 	const closeModal = () => {
 		setModalVisible(false);
 	};
@@ -116,7 +113,6 @@ export const ProjectDetails = () => {
 				</View>
 			</TouchableOpacity>
 
-			{/* Modal dla powiększonego planu domu */}
 			<Modal visible={planModalVisible} transparent={true}>
 				<View style={styles.modalContainer}>
 					<Image
@@ -126,8 +122,8 @@ export const ProjectDetails = () => {
 								: { uri: project.planImage }
 						}
 						style={{
-							width: width, // Pełna szerokość ekranu
-							height: height, // Pełna wysokość ekranu
+							width: width,
+							height: height,
 						}}
 						resizeMode='contain'
 					/>
@@ -147,16 +143,15 @@ export const ProjectDetails = () => {
 				{project.interiorDescription}
 			</Text>
 
-			{/* Modal z karuzelą */}
 			<Modal visible={modalVisible} transparent={true}>
 				<View style={styles.modalContainer}>
 					<ScrollView
 						horizontal
 						pagingEnabled
 						showsHorizontalScrollIndicator={false}
-						snapToInterval={width} // Dynamiczna szerokość
+						snapToInterval={width}
 						decelerationRate='fast'
-						contentOffset={{ x: selectedImageIndex * width, y: 0 }} // Startowe przesunięcie
+						contentOffset={{ x: selectedImageIndex * width, y: 0 }}
 					>
 						{project.images.map((image: any, index: number) => (
 							<Image
@@ -167,8 +162,8 @@ export const ProjectDetails = () => {
 										: { uri: image }
 								}
 								style={{
-									width: width, // Pełna szerokość ekranu
-									height: height, // Pełna wysokość ekranu
+									width: width,
+									height: height,
 								}}
 								resizeMode='contain'
 							/>

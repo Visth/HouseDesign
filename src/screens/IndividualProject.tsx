@@ -4,7 +4,7 @@ import { Picker } from "@react-native-picker/picker";
 import themeColors from "../styles/theme";
 
 export const IndividualProject = () => {
-    const [selectedRegion, setSelectedRegion] = React.useState(""); // State dla wybranego województwa
+    const [selectedRegion, setSelectedRegion] = React.useState("");
 	const [email, setEmail] = React.useState("");
 	const [phone, setPhone] = React.useState("");
 	const [message, setMessage] = React.useState("");
@@ -17,10 +17,8 @@ export const IndividualProject = () => {
 	const handleSubmit = () => {
 		if (!isFormValid) return;
 
-		// Wyświetlenie komunikatu o wysłaniu wiadomości
 		setIsSubmitted(true);
 
-		// Wyczyszczenie formularza po 5 sekundach
 		setTimeout(() => {
 			setIsSubmitted(false);
 			setEmail("");
@@ -33,18 +31,14 @@ export const IndividualProject = () => {
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
-            {/* Nagłówek */}
             <Text style={styles.header}>Projekty Indywidualne</Text>
-            
-            {/* Opis */}
+
             <Text style={styles.description}>
                 Przerobimy dla Ciebie dowolny projekt tak, aby Twój dom był idealny i spełniał wszelkie oczekiwania.
             </Text>
-            
-            {/* Zdjęcie */}
+
             <Image source={require("../assets/img/individual/worker.jpg")} style={styles.image} />
             
-            {/* CEO Sekcja */}
             <Text style={styles.subHeader}>
                 Nazywam się Stanisław Nowak, CEO HouseDesign i wieloletni praktyk w budowie domów
             </Text>
@@ -62,7 +56,6 @@ export const IndividualProject = () => {
 							Wyślij mi wiadomość, odpowiem tak szybko jak to możliwe
 						</Text>
 
-						{/* Inputy formularza */}
 						<TextInput
 							style={styles.input}
 							placeholder='Twój adres email...'
@@ -94,7 +87,6 @@ export const IndividualProject = () => {
 							onChangeText={setHouseArea}
 						/>
 
-						{/* Select z województwami */}
 						<View style={styles.selectContainer}>
 							<Picker
 								selectedValue={selectedRegion}
@@ -180,7 +172,6 @@ export const IndividualProject = () => {
 							<Text style={styles.submitButtonText}>Wyślij</Text>
 						</TouchableOpacity>
 
-						{/* Wiadomość potwierdzająca */}
 						{isSubmitted && (
 							<Text style={styles.successMessage}>
 								Wiadomość wysłana. Skontaktujemy się z Tobą tak
@@ -212,7 +203,7 @@ const styles = StyleSheet.create({
     },
     image: {
         width: "100%",
-        height: 200, // Dopasowane do wymiarów z ProjectDetails.tsx
+        height: 200,
         borderRadius: 10,
         marginBottom: 20,
     },
@@ -248,7 +239,6 @@ const styles = StyleSheet.create({
 	},
 	textArea: {
 		textAlignVertical: "top",
-		// height: 100,
 	},
 	selectContainer: {
 		borderBottomWidth: 1,

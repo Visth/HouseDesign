@@ -37,7 +37,6 @@ export const Plot = () => {
 		navigation.navigate("ConstructionCalculator");
 	};
 
-	// Funkcja otwierająca modal
 	const openModal = (image: any) => {
 		setSelectedImage(image);
 		setModalVisible(true);
@@ -45,10 +44,8 @@ export const Plot = () => {
 
 	return (
 		<ScrollView contentContainerStyle={styles.container}>
-			{/* Nagłówek */}
 			<Text style={styles.header}>Działka pod budowę domu</Text>
 
-			{/* Opis */}
 			<Text style={styles.description}>
 				Poszukujesz idealnej działki pod budowę swojego wymarzonego domu? 
 				Chętnie pomożemy! Oferujemy kompleksową obsługę, od wyboru odpowiedniego 
@@ -57,10 +54,7 @@ export const Plot = () => {
 				sprawnie i bezproblemowo.
 			</Text>
 
-			{/* Zdjęcie */}
 			<Image source={require("../assets/img/plot/plot-main.jpg")} style={styles.image} />
-
-			{/* Lista zalet */}
 			<Text style={styles.subHeader}>Dlaczego warto nam zaufać?</Text>
 			<View style={styles.listContainer}>
 				<Text style={styles.listItem}>✔ Pomoc w wyborze i ocenie przydatności działki</Text>
@@ -73,7 +67,6 @@ export const Plot = () => {
 				<Text style={styles.listItem}>✔ Odbiór budynku</Text>
 			</View>
 
-			{/* Sekcja: Jak budujemy domy */}
 			<Text style={styles.sectionHeader}>Oto jak budujemy domy</Text>
 			<Image source={require("../assets/img/plot/plot-main-2.jpg")} style={styles.processImage} />
 			<View style={styles.listContainer}>
@@ -85,8 +78,6 @@ export const Plot = () => {
 				<Text style={styles.listItem}>✔ Kontrola jakości na każdym etapie budowy</Text>
 				<Text style={styles.listItem}>✔ Gwarancja na wykonane prace</Text>
 			</View>
-
-			{/* Sekcja: Aktualne budowy */}
 			<Text style={styles.boldText}>Aktualne budowy</Text>
 			<View style={styles.galleryContainer}>
 				{images.map((image, index) => (
@@ -95,8 +86,6 @@ export const Plot = () => {
 					</TouchableOpacity>
 				))}
 			</View>
-
-			{/* Modal wyświetlający jedno zdjęcie */}
 			<Modal visible={modalVisible} transparent={true} animationType="fade">
 				<View style={styles.modalContainer}>
 					<TouchableOpacity onPress={() => setModalVisible(false)} style={styles.closeButton}>
@@ -186,12 +175,12 @@ const styles = StyleSheet.create({
 		justifyContent: "space-between",
 	},
 	imageWrapper: {
-		width: width / 3 - 18, // Dzielimy szerokość na 3 kolumny z marginesem
+		width: width / 3 - 18,
 		marginBottom: 10,
 	},
 	galleryImage: {
 		width: "100%",
-		height: width / 3 - 14, // Zachowujemy proporcje
+		height: width / 3 - 14,
 		borderRadius: 8,
 	},
 	modalContainer: {

@@ -14,21 +14,20 @@ import themeColors from "../styles/theme";
 import projectsData from "../data/projectsData";
 
 export const Home = () => {
-	const [selectedDate, setSelectedDate]: any = useState(null); // Wybrana data
-	const [modalVisible, setModalVisible] = useState(false); // Kontrola widoczności modala
+	const [selectedDate, setSelectedDate]: any = useState(null);
+	const [modalVisible, setModalVisible] = useState(false);
 
 	const navigation: any = useNavigation();
 
-	const availableHours = ["10:00", "12:00", "14:00", "16:00", "18:00"]; // Dostępne godziny
+	const availableHours = ["10:00", "12:00", "14:00", "16:00", "18:00"];
 
 	const handleDayPress = (day: any) => {
-		setSelectedDate(day.dateString); // Ustaw wybraną datę
-		setModalVisible(true); // Otwórz modal
+		setSelectedDate(day.dateString);
+		setModalVisible(true);
 	};
 
 	return (
 		<View style={styles.container}>
-			{/* Przyklejony nagłówek */}
 			<View style={styles.stickyOptionsContainer}>
 				<TouchableOpacity
 					style={styles.optionSelected}
@@ -47,16 +46,13 @@ export const Home = () => {
 				</TouchableOpacity>
 			</View>
 
-			{/* Treść przewijalna */}
 			<ScrollView contentContainerStyle={styles.contentContainer}>
 				<View style={styles.section}>
 					<Text style={styles.sectionTitle}>
 						Dlaczego warto zbudować dom z HouseDesign?
 					</Text>
 					<Text style={styles.sectionContent}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua.
+					HouseDesign to gwarancja jakości, terminowości i pełnej transparentności kosztów. Dzięki wieloletniemu doświadczeniu i sprawdzonym wykonawcom zapewniamy kompleksową obsługę na każdym etapie budowy. Twój komfort i satysfakcja są dla nas priorytetem!
 					</Text>
 				</View>
 
@@ -73,7 +69,7 @@ export const Home = () => {
 							projectsData[13],
 						].map(
 							(project, index) =>
-								project && ( // Sprawdzenie czy projekt istnieje (zapobiega błędom)
+								project && (
 									<TouchableOpacity
 										key={index}
 										style={styles.project}
@@ -102,7 +98,6 @@ export const Home = () => {
 					</View>
 				</View>
 
-				{/* Kalendarz */}
 				<View style={styles.section}>
 					<Text style={styles.sectionTitle}>
 						Zaplanuj rozmowę z naszym konsultantem
@@ -123,7 +118,6 @@ export const Home = () => {
 					/>
 				</View>
 
-				{/* Modal z godzinami */}
 				<Modal
 					visible={modalVisible}
 					transparent={true}
@@ -162,9 +156,7 @@ export const Home = () => {
 						Budowa domu? Z nami to proste!
 					</Text>
 					<Text style={styles.sectionContent}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Quisque volutpat, tortor non volutpat ultricies, nulla
-						quam facilisis nunc, non elementum nisi ex in sapien.
+					Marzysz o własnym domu, ale nie wiesz, od czego zacząć? Z nami cały proces staje się prosty i przejrzysty! Od wyboru projektu po finalne wykończenie – zajmiemy się wszystkim, abyś mógł cieszyć się swoim wymarzonym miejscem bez stresu.
 					</Text>
 					<TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Plot")}>
 						<Text style={styles.buttonText}>
@@ -183,11 +175,11 @@ const styles = StyleSheet.create({
 		backgroundColor: themeColors.white,
 	},
 	stickyOptionsContainer: {
-		position: "absolute", // Ustawia opcje jako przyklejone
+		position: "absolute",
 		top: 0,
 		left: 0,
 		right: 0,
-		zIndex: 1000, // Wyższy indeks warstwy, aby nic ich nie przykrywało
+		zIndex: 1000,
 		backgroundColor: themeColors.white,
 		flexDirection: "row",
 		justifyContent: "space-between",
@@ -196,10 +188,10 @@ const styles = StyleSheet.create({
 		shadowOffset: { width: 0, height: 2 },
 		shadowOpacity: 0.1,
 		shadowRadius: 4,
-		elevation: 5, // Dodaje cień na Androidzie
+		elevation: 5,
 	},
 	contentContainer: {
-		paddingTop: 60, // Zapewnia miejsce na przyklejony nagłówek
+		paddingTop: 60,
 		paddingHorizontal: 20,
 		paddingBottom: 20,
 	},
@@ -249,7 +241,7 @@ const styles = StyleSheet.create({
 		justifyContent: "space-between",
 	},
 	project: {
-		width: "48%", // 2 elementy w rzędzie
+		width: "48%",
 		marginBottom: 15,
 		backgroundColor: "#e5e5e5",
 		borderRadius: 10,

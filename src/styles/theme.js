@@ -1,5 +1,5 @@
 const themeColors = {
-	primary: "#007aff", // Główny niebieski kolor (np. dla przycisków)
+	primary: "#007aff",
 	lightBlue: "#d4eaff", // Jasny niebieski (np. dla tła gradientu)
 	white: "#ffffff", // Biały
 	black: "#000000", // Czarny

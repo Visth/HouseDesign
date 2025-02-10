@@ -4,7 +4,6 @@ import {
 	Text,
 	StyleSheet,
 	TouchableOpacity,
-	ImageBackground,
 	ScrollView,
 	TextInput,
 } from "react-native";
@@ -15,7 +14,7 @@ import MapView, { Marker } from "react-native-maps";
 import themeColors from "../styles/theme";
 
 export const Contact = () => {
-	const [selectedRegion, setSelectedRegion] = React.useState(""); // State dla wybranego województwa
+	const [selectedRegion, setSelectedRegion] = React.useState("");
 	const [email, setEmail] = React.useState("");
 	const [phone, setPhone] = React.useState("");
 	const [message, setMessage] = React.useState("");
@@ -30,10 +29,8 @@ export const Contact = () => {
 	const handleSubmit = () => {
 		if (!isFormValid) return;
 
-		// Wyświetlenie komunikatu o wysłaniu wiadomości
 		setIsSubmitted(true);
 
-		// Wyczyszczenie formularza po 5 sekundach
 		setTimeout(() => {
 			setIsSubmitted(false);
 			setEmail("");
@@ -46,7 +43,6 @@ export const Contact = () => {
 
 	return (
 		<View style={styles.container}>
-			{/* Przyklejony nagłówek */}
 			<View style={styles.stickyOptionsContainer}>
 				<TouchableOpacity
 					style={styles.option}
@@ -65,19 +61,7 @@ export const Contact = () => {
 				</TouchableOpacity>
 			</View>
 
-			{/* Zawartość przewijalna */}
 			<ScrollView contentContainerStyle={styles.scrollContent}>
-				{/* Zdjęcie z napisem KONTAKT */}
-
-				{/* <ImageBackground
-					style={styles.headerImage}
-					source={{ uri: "" }}>
-					<View style={styles.headerOverlay}>
-						<Text style={styles.headerText}>KONTAKT</Text>
-					</View>
-				</ImageBackground> */}
-
-				{/* Sekcja treści */}
 				<View style={styles.contentContainer}>
 					<Text style={styles.title}>
 						Zastanawiasz się nad budową domu lub zakupem projektu?
@@ -87,7 +71,6 @@ export const Contact = () => {
 						pytania.
 					</Text>
 
-					{/* Karty z informacjami */}
 					<View style={styles.card}>
 						<Ionicons
 							name='call'
@@ -110,13 +93,11 @@ export const Contact = () => {
 						</Text>
 					</View>
 
-					{/* Formularz „Wyślij wiadomość” */}
 					<View style={styles.formContainer}>
 						<Text style={styles.formTitle}>
 							Wyślij nam wiadomość
 						</Text>
 
-						{/* Inputy formularza */}
 						<TextInput
 							style={styles.input}
 							placeholder='Twój adres email...'
@@ -148,7 +129,6 @@ export const Contact = () => {
 							onChangeText={setHouseArea}
 						/>
 
-						{/* Select z województwami */}
 						<View style={styles.selectContainer}>
 							<Picker
 								selectedValue={selectedRegion}
@@ -234,7 +214,6 @@ export const Contact = () => {
 							<Text style={styles.submitButtonText}>Wyślij</Text>
 						</TouchableOpacity>
 
-						{/* Wiadomość potwierdzająca */}
 						{isSubmitted && (
 							<Text style={styles.successMessage}>
 								Wiadomość wysłana. Skontaktujemy się z Tobą tak

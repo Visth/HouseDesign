@@ -2,17 +2,17 @@ import React, { FC } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
-import { useNavigation } from "@react-navigation/native"; // Dodane importy
+import { useNavigation } from "@react-navigation/native";
 import themeColors from "../styles/theme";
 
 export const LandingScreen = () => {
-    const navigation: any = useNavigation(); // Hook do nawigacji
+    const navigation: any = useNavigation();
 
     return (
         <LinearGradient
             colors={["#37b6ae", "#ffffff"]}
-            start={{ x: 0, y: 0 }} // Początek gradientu (lewy górny róg)
-            end={{ x: 1, y: 1 }}   // Koniec gradientu (prawy dolny róg)
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
             style={styles.container}
         >
             <View style={styles.header}>
@@ -21,7 +21,7 @@ export const LandingScreen = () => {
             </View>
             <TouchableOpacity
                 style={styles.button}
-                onPress={() => navigation.navigate("Home")} // Przejście do "Home"
+                onPress={() => navigation.navigate("Home")}
             >
                 <Text style={styles.buttonText}>Startujmy!</Text>
             </TouchableOpacity>
